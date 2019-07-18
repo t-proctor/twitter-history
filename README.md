@@ -1,4 +1,4 @@
 # twitter-history
 Rediscover your past tweets, retweets, and favorites
 
-See the Wiki for installation instructions
+See the Wiki for instructions
