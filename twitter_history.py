@@ -69,7 +69,7 @@ def your_tweets(num):
                 your_username = contents[begIndex:endIndex]
 
     #use tweets to figure out your tweets
-    with open("tweet2.js") as dataFile:
+    with open("tweet.js") as dataFile:
         contents = dataFile.read()
         fulltext = [m.start() for m in re.finditer('full_text', contents)]
         id = [m.start() for m in re.finditer('id', contents)]
