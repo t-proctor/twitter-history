@@ -15,9 +15,9 @@ def favorites(num):
                     begIndex = quotes[i+2] + 1
                     endIndex = quotes[i+3]
                     entries.append(lines[begIndex:endIndex])
-        x = random.sample(entries, num)
-        for z in x:
-            webbrowser.open(z)
+        randEntries = random.sample(entries, num)
+        for entry in randEntries:
+            webbrowser.open(entry)
 
 def retweets(num):
     #use tweets file to figure out your retweets
@@ -50,10 +50,10 @@ def retweets(num):
         for i in range(len(retweets)):
             url = "https://twitter.com/" + retweets[i] + "/status/" + authors[i]
             urls.append(url)
-        q = random.sample(urls, num)
-        for wow in q:
-            webbrowser.open(wow)
-
+        
+        randEntries = random.sample(urls, num)
+        for entry in randEntries:
+            webbrowser.open(entry)
 
 def your_tweets(num):
     your_username = ""
@@ -88,9 +88,9 @@ def your_tweets(num):
         for i in range(len(your_tweets)):
             url = "https://twitter.com/" + your_username + "/status/" + your_tweets[i]
             urls.append(url)
-        q = random.sample(urls, num)
-        for wow in q:
-            webbrowser.open(wow)
+        randEntries = random.sample(urls, num)
+        for entry in randEntries:
+            webbrowser.open(entry)
 
 def main():
     what_tweets = input("Type in RT for Retweets, FV for Favorites, YT for Your Tweets, RTYT for Retweets and Tweets, etc  \n")
