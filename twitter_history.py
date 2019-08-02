@@ -28,7 +28,6 @@ def retweets(num):
         colon = [m.start() for m in re.finditer(':', contents)]
         id = [m.start() for m in re.finditer('id_str', contents)]
         quotes = [m.start() for m in re.finditer('"', contents)]
-
         for tweet in retweet:
             for i in range(len(colon)):
                 if colon[i] == (tweet - 3):
@@ -50,7 +49,6 @@ def retweets(num):
         for i in range(len(retweets)):
             url = "https://twitter.com/" + retweets[i] + "/status/" + authors[i]
             urls.append(url)
-        
         randEntries = random.sample(urls, num)
         for entry in randEntries:
             webbrowser.open(entry)
@@ -67,7 +65,6 @@ def your_tweets(num):
                 begIndex = quotes[b + 2] + 1
                 endIndex = quotes[b + 3]
                 your_username = contents[begIndex:endIndex]
-
     #use tweets to figure out your tweets
     with open("tweet.js") as dataFile:
         contents = dataFile.read()
@@ -95,13 +92,10 @@ def your_tweets(num):
 def main():
     what_tweets = input("Type in RT for Retweets, FV for Favorites, YT for Your Tweets, RTYT for Retweets and Tweets, etc  \n")
     how_many = int(input("How many tweets would you like to open of each? "))
-
     if "RT" in what_tweets:
         retweets(how_many)
-
     if "FV" in what_tweets:
         favorites(how_many)
-
     if "YT" in what_tweets:
         your_tweets(how_many)
 
