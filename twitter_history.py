@@ -9,7 +9,6 @@ def favorites(num):
         expandedURL = [m.start() for m in re.finditer('expandedUrl', lines)]
         quotes = [m.start() for m in re.finditer('"', lines)]
         entries = []
-        # entries.append(lines[401:453])
         for eu in expandedURL:
             for i in range(len(quotes)):
                 if quotes[i] == (eu - 1):
