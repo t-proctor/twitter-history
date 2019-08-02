@@ -67,7 +67,6 @@ def your_tweets(num):
                 begIndex = quotes[b + 2] + 1
                 endIndex = quotes[b + 3]
                 your_username = contents[begIndex:endIndex]
-    your_username = "tim__proctor"
 
     #use tweets to figure out your tweets
     with open("tweet2.js") as dataFile:
